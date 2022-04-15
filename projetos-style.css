@@ -88,7 +88,7 @@ nav{
 .menu-bg, #menu-bar{
 	top:0;
 	right: 0;
-	position: absolute;
+	position: fixed; /*para mante-lo dentro dos limites da div container*/
 }
 .menu-bg{
 	z-index: 1;
@@ -229,7 +229,7 @@ nav{
 footer{
     height: 3vh;
     width: 100vw;
-    background: #ffffff;
+    background: #202020;
     font-size: small;
     display: flex;
     align-items: center; /*alinha vertical*/

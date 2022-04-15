@@ -10,7 +10,7 @@ body{
 /* HEADER */
 
 header{
-    height: 95vh;
+    height: 97vh;
     width: 100%;    
     background-color: #202020;
     background-image: url("/workspace/Portfolio/pics/fern.jpg");
@@ -25,6 +25,20 @@ header{
     box-sizing: border-box;
     padding: 0 100px; /*0 em cima e em baixo e 100 na direita e esquerda */
     position: relative; /*para usar o menu absoluto*/
+}
+
+.menu-bg, #menu-bar{
+	top:0;
+	right: 0;
+	position: fixed;
+}
+.menu-bg{
+	z-index: 1;
+	width: 0;
+	height: 0;
+	background: #ffffff;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out 0s;
 }
 
 h1{
@@ -140,20 +154,6 @@ nav{
     top: 48px;
 }
 
-.menu-bg, #menu-bar{
-	top:0;
-	right: 0;
-	position: absolute;
-}
-.menu-bg{
-	z-index: 1;
-	width: 0;
-	height: 0;
-	background: #ffffff;
-	border-radius: 50%;
-	transition: 0.3s ease-in-out 0s;
-}
-
 #menu-bar{
 	z-index:2;
 }
@@ -173,6 +173,7 @@ nav{
 
 footer{
     width: 100vw;
+    height: 3vh;
     background: #202020;
     font-size: small;
     display: flex;
