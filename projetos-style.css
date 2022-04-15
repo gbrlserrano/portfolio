@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; /*font*/
+    background-color: #202020;
+}
+
+
+/* Menu hamburger */
+
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 50px 34px 73px;
+	cursor: pointer;
+}
+
+.bar{
+    width: 50px;
+    height: 2px;
+    background-color: #9b9b9b;
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out 0s;
+}
+
+.bar:nth-child(1){
+    top:26px;
+    transform: rotate(0);
+}
+
+.bar:nth-child(2){
+    top:46px;
+    transform: rotate(0);
+}
+
+.bar:nth-child(3){
+    top:66px;
+    transform: rotate(0);
+}
+
+nav li a{
+	color: #202020;;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: #9b9b9b;
+}
+
+nav li{
+	list-style: none;
+	padding: 16px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav{
+	padding: 0;
+	margin: 0 20px;
+	transition: 0.3s ease-in-out 0s;
+	display: none;
+}
+
+/*Animação menu*/
+
+.change .bar:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+.change .bar:nth-child(2){
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.change .bar:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+.menu-bg, #menu-bar{
+	top:0;
+	right: 0;
+	position: absolute;
+}
+.menu-bg{
+	z-index: 1;
+	width: 0;
+	height: 0;
+	background: #ffffff;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out 0s;
+}
+
+#menu-bar{
+	z-index:2;
+}
+
+.change-bg
+{
+	width: 550px;
+	height: 540px;
+	transform: translate(60%,-20%);
+}
+
+.change{
+	display: block;
+} 
+
+/*MAIN*/
+
+.container{
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    background-image: url("/workspace/Portfolio/pics/fern.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter:sepia(80%); 
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-text{
+    width: 40%;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before{
+    position: absolute;
+    content:'';
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #9b9b9b;
+    opacity: 0;
+    transition: 0.5s ease-in-out; 
+}
+
+.card-wrapper h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper p{
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover{
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before{
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p{ /*transição para aparecer*/
+    opacity: 1;
+    visibility: visible;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover > .card-wrapper h2{
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+} 
+
+/* Footer */
+
+footer{
+    height: 3vh;
+    width: 100vw;
+    background: #ffffff;
+    font-size: small;
+    display: flex;
+    align-items: center; /*alinha vertical*/
+    justify-content: center; /*alinha horizontal*/
+    color: #ffffff;
+}
